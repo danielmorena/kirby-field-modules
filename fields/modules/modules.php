@@ -235,7 +235,7 @@ class ModulesField extends InputField {
     });
 
     // Sort modules
-    if($this->value()) {
+    if($this->value() AND page()->hasModules()) {
       $i = 0;
 
       $order = a::merge(array_flip($this->value()), array_flip($modules->pluck('uid')));
